@@ -18,6 +18,9 @@ inputs:
     default: 'Spec'
   gen-attributes:
     description: 'Zap generation attributes'
+  spec-root:
+    description: 'Path to Spec root directory'
+    default: '.'
 runs:
   using: 'node20'
   main: 'index.js'

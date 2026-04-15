@@ -35,6 +35,9 @@ function runAlchemy() {
   if (process.env['INPUT_GEN-ATTRIBUTES']) {
     args.push('--gen-attributes', process.env['INPUT_GEN-ATTRIBUTES']);
   }
+  if (process.env['INPUT_SPEC-ROOT']) {
+    args.push('--spec-root', process.env['INPUT_SPEC-ROOT']);
+  }
   
   const out = childProcess.spawnSync(path, args, { cwd: process.env.GITHUB_WORKSPACE, stdio: 'inherit' });
   process.exit(out.status);
